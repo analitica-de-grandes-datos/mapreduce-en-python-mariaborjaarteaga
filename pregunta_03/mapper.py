@@ -5,4 +5,4 @@ import sys
 if __name__ == "__main__":
     for line in sys.stdin:
         columnas = line.split(',')
-        sys.stdout.write("{}\t1\n".format(columnas[2]))
+        sys.stdout.write("{},{}\n".format(lista[1].strip(),lista[0]))
