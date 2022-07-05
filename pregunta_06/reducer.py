@@ -9,7 +9,7 @@ if __name__ == '__main__':
     total = 0
     for line in sys.stdin:
         key, val = line.split("\t")
-        val = int(val)
+        val = float(val)
         if key == ckey:
             if val > total:
                 total = val
