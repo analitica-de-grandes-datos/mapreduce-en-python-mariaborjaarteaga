@@ -3,9 +3,7 @@
 #
 #
 import sys
-#
-# Esta funcion reduce los elementos que tienen la misma clave
-#
+
 if __name__ == '__main__':
 
     ckey = None
