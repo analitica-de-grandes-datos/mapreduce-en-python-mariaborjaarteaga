@@ -9,13 +9,13 @@ if __name__ == '__main__':
     total = 0
     for line in sys.stdin:
         key, val = line.split("\t")
-        val = int(val)
+        val = val.strip()
         if key == ckey:
-            total += val
+            n = n + "," + str(int(val))
         else:
             if ckey is not None:
-                sys.stdout.write("{}\t{}\n".format(ckey, total))
+                sys.stdout.write("{}\t{}\n".format(ckey, n))
             ckey = key
-            total = val
+            n = str(int(val))
 
-    sys.stdout.write("{}\t{}\n".format(ckey, total))
+    sys.stdout.write("{}\t{}\n".format(ckey, n))

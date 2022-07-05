@@ -4,5 +4,11 @@
 import sys
 if __name__ == "__main__":
     for line in sys.stdin:
-        columnas = line.split(',')
-        sys.stdout.write("{}\t1\n".format(columnas[2]))
+        clave, valor = line.split("\t")
+
+        valor = list(valor.strip().split(","))
+
+        clave = clave.zfill(4)
+
+        for letra in valor:
+            sys.stdout.write("{}\t{}\n".format(letra, clave))
