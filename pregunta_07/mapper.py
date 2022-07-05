@@ -4,5 +4,6 @@
 import sys
 if __name__ == "__main__":
     for line in sys.stdin:
-        columnas = line.split(',')
-        sys.stdout.write("{}\t1\n".format(columnas[2]))
+        columna3 = line.split("   ")[2].strip()
+        columna3 = columna3.zfill(4)
+        sys.stdout.write("{} {} {}\n".format(str(line.split("   ")[0]), columna3, line.split("   ")[1]))
