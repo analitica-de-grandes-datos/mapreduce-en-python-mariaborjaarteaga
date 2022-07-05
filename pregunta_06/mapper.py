@@ -4,5 +4,5 @@
 import sys
 if __name__ == "__main__":
     for line in sys.stdin:
-        columnas = line.split(',')
+        columnas = line.split('  ')
         sys.stdout.write("{}\t{}\n".format(columnas[0], float(columnas[2])))
