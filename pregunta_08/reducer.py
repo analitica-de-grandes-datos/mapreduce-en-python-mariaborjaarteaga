@@ -6,16 +6,20 @@ import sys
 if __name__ == '__main__':
 
     ckey = None
-    total = 0
+    suma = 0
+    conteo = 0
     for line in sys.stdin:
         key, val = line.split("\t")
-        val = int(val)
+        val = float(val)
         if key == ckey:
-            total += val
+            suma = suma + val
+            conteo = conteo + 1
+
         else:
             if ckey is not None:
-                sys.stdout.write("{}\t{}\n".format(ckey, total))
+                sys.stdout.write("{}\t{}\t{}\n".format(ckey, suma,suma / conteo))
             ckey = key
-            total = val
+            suma = val
+            conteo = 1
 
-    sys.stdout.write("{}\t{}\n".format(ckey, total))
+    sys.stdout.write("{}\t{}\t{}\n".format(ckey, suma, suma / conteo))
