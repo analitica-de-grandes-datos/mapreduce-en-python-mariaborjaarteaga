@@ -11,11 +11,16 @@ if __name__ == '__main__':
         key, val = line.split("\t")
         val = int(val)
         if key == ckey:
-            total += val
+            if val > total:
+                total = val
+            if val < min:
+                min = val
+
         else:
             if ckey is not None:
-                sys.stdout.write("{}\t{}\n".format(ckey, total))
+                sys.stdout.write("{}\t{}\t{}\n".format(ckey, total,min))
             ckey = key
             total = val
+            min = val
 
-    sys.stdout.write("{}\t{}\n".format(ckey, total))
+    sys.stdout.write("{}\t{}\t{}\n".format(ckey, total,min))
