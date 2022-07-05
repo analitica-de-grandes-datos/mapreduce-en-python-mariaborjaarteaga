@@ -14,8 +14,8 @@ if __name__ == '__main__':
             total += val
         else:
             if ckey is not None:
-                sys.stdout.write("{}\t{}\n".format(ckey, total))
+                sys.stdout.write("{},{}\n".format(ckey, total))
             ckey = key
             total = val
 
-    sys.stdout.write("{}\t{}\n".format(ckey, total))
+    sys.stdout.write("{},{}\n".format(ckey, total))
