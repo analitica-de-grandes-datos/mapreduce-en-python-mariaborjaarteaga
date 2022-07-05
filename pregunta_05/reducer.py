@@ -8,7 +8,7 @@ if __name__ == '__main__':
     ckey = None
     total = 0
     for line in sys.stdin:
-        key, val = line.split("\t")
+        key, val = line.split(",")
         val = int(val)
         if key == ckey:
             total += val
